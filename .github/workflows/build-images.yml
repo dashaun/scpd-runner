@@ -43,6 +43,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-amd64
           labels: ${{ steps.meta.outputs.labels }}
+          provenance: false
           cache-from: type=gha,scope=amd64
           cache-to: type=gha,mode=max,scope=amd64
 
@@ -85,6 +86,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request'}}
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:linux-arm64
           labels: ${{ steps.meta.outputs.labels }}
+          provenance: false
           cache-from: type=gha,scope=arm64
           cache-to: type=gha,mode=max,scope=arm64
 

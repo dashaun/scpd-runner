@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y curl tar zip unzip jq git gh && mkdir -
 # Install SDKMAN!
 RUN curl -s "https://get.sdkman.io?ci=true" | bash
 
-RUN source "/root/.sdkman/bin/sdkman-init.sh" && sdk install mvnd && sdk install java 21.0.10-librca && sdk default java 21.0.10-librca && sdk use java 21.0.10-librca
+RUN source "/root/.sdkman/bin/sdkman-init.sh" && sdk install mvnd 1.0.5 && sdk install java 21.0.10-librca && sdk default java 21.0.10-librca && sdk use java 21.0.10-librca
 
 ADD settings.xml /root/.m2/
 

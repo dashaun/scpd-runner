@@ -6,6 +6,7 @@ A multi-arch Docker image providing a Java development environment for CI/CD pip
 
 - **Ubuntu** (latest) base image
 - **Liberica JDK 21** (21.0.10) via SDKMAN!
+- **Maven Daemon (mvnd)** via SDKMAN!
 - CLI tools: `curl`, `tar`, `zip`, `unzip`, `jq`, `git`, `gh`
 - Maven `settings.xml` pre-configured at `/root/.m2/`
 
